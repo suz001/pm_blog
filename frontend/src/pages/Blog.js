@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React from 'react';
-import Navbar from './components/Navbar';
-class App extends React.Component{
+import Navbar from '../components/Navbar';
+
+class Blog extends React.Component{
   state = { details:[],}
   componentDidMount(){
 
@@ -19,9 +20,7 @@ class App extends React.Component{
  render(){
   return (
     <div>
-      <Navbar/>
-    <header>Data Generated From Django</header>
-    <hr></hr>
+     <Navbar/>
     {this.state.details.map((output,id)=>(
       <div key={id}>
         <h2>{output.title}</h2>
@@ -37,4 +36,4 @@ class App extends React.Component{
  }
 
 }
-export default App;
+export default Blog;
