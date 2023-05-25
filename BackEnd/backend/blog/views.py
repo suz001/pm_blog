@@ -16,7 +16,12 @@ class BlogView(APIView):
  
     def get(self,request):
         output = [{"title": output.title,
-                   "content": output.content}
+                   "content": output.content,
+                   "author":output.author, 
+                   "created_at":output.created_at,
+                   "updated_at":output.updated_at,
+                   "category": output.category,
+                   "image":output.image}
                    for output in Blog.objects.all()]
         return Response(output)
     
