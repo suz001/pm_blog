@@ -9,11 +9,14 @@ from blog.serializer import BlogSerializer
 from blog.models import Blog
 from rest_framework.response import Response
 
+from rest_framework.parsers import MultiPartParser, FormParser
+
 from rest_framework import status
 
 # create a class for the Blog model viewsets
 class BlogView(APIView):
- 
+    parser_classes = (MultiPartParser, FormParser)
+
     def get(self,request):
         output = [{"title": output.title,
                    "content": output.content,
@@ -21,7 +24,7 @@ class BlogView(APIView):
                    "created_at":output.created_at,
                    "updated_at":output.updated_at,
                    "category": output.category,
-                   "image":output.image}
+                  }
                    for output in Blog.objects.all()]
         return Response(output)
     
@@ -59,3 +62,4 @@ class BlogDetail(APIView):
         snippet.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
         
+    
