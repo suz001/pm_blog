@@ -11,3 +11,8 @@ class BlogSerializer(serializers.ModelSerializer):
         model = Blog
         fields = ['title','author','content',
                   'created_at','updated_at','category','image']
+        
+    def get_photo_url(self,obj):
+        request = self.content.get('request')
+        photo_url = obj.fingerprint.url
+        return request.build_absolute_uri(photo_url)

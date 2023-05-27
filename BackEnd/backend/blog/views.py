@@ -18,15 +18,10 @@ class BlogView(APIView):
     parser_classes = (MultiPartParser, FormParser)
 
     def get(self,request):
-        output = [{"title": output.title,
-                   "content": output.content,
-                   "author":output.author, 
-                   "created_at":output.created_at,
-                   "updated_at":output.updated_at,
-                   "category": output.category,
-                  }
-                   for output in Blog.objects.all()]
-        return Response(output)
+        queryset = Blog.objects.all()
+        serializer = BlogSerializer(queryset, context={"request": 
+                      request}, many=True)
+        return Response(serializer.data) 
     
     def post(self,request):
         serializer = BlogSerializer(data=request.data)
