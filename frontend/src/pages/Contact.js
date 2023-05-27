@@ -3,10 +3,11 @@ import Navbar from '../components/Navbar';
 import '../css/Contact.css';
 function Contact() {
   return (
-    <div class='container'>
+    
+    <div>
       <Navbar/>
+    <div class='container'>
       <form id='contact'>
-        
         <h1>Contact <span>Here</span></h1>
         <label for="name">Contact Name</label>
         <input type="text" name="name" id="" required/>
@@ -18,7 +19,9 @@ function Contact() {
         <textarea name="text" id="message" cols="30" rows="10" required/> 
         <input type="submit" value='Submit'/>
       </form>      
-    </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+    </div>     
+    </div>   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
   )
 }
 
