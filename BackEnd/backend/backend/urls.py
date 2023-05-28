@@ -19,11 +19,15 @@ from django.urls import path, include
 from blog.views import *
 from django.conf import settings
 from django.conf.urls.static import static
+from contact.views import contact
+
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('',BlogView.as_view(), name="blog"),
     path('<int:pk>/', BlogDetail.as_view()),
+    path('contact/',contact,name='contact'),
     
 ]+static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 
