@@ -1,12 +1,21 @@
-import {withRouter} from "react-router-dom"
+import {useParams} from "react-router-dom"
 
 
-import React from 'react'
+import React, { Component } from 'react'
+import Navbar from '../components/Navbar';
+import axios from 'axios';
 
-function BlogPage(props) {
-  return (
-    <div>BlogPage</div>
-  )
+class BlogPage extends Component{
+  render(){
+    console.log(this.props)
+    return(
+      <div>
+      <Navbar/>
+     
+      <div>{}</div>
+      </div>
+    )
+  }
 }
 
 export default BlogPage;

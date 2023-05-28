@@ -3,7 +3,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import '../css/Bloglist.css';
 import {Link} from "react-router-dom";
-import { BlogPage } from './BlogPage';
+
 class Blog extends React.Component{
   state = { details:[],}
   componentDidMount(){
@@ -17,7 +17,6 @@ class Blog extends React.Component{
     });
   })
   .catch(err => {})
- 
 }
 
 
@@ -39,6 +38,7 @@ class Blog extends React.Component{
 
     <div>
     <Link to={'/blog/'+id} className = "blog-title">{output.title}</Link>
+   <a>{}</a>
     </div>
 
     <div>
