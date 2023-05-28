@@ -1,0 +1,39 @@
+.blogs{
+    margin: 20px auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 5px;
+}
+
+
+.cards{
+    width: 300px;
+    height: 400px;
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px;
+    margin: 40px 20px;
+    
+}
+
+.blog-image{
+    width: 100%;
+    max-width: 300px;
+    min-height: 200px;
+    display: block;
+    object-fit: cover;
+}
+
+.blog-title{
+    text-transform: uppercase;
+    margin:5px 0px;
+}
+
+.blog-author{
+    margin: 5px 0px;
+    padding-bottom: 20px;
+    font-size: 18px;
+}

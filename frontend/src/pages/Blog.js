@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import Navbar from '../components/Navbar';
-import ProductList from '../components/ProductList';
+import '../css/Bloglist.css';
 
 class Blog extends React.Component{
   state = { details:[],}
@@ -32,25 +32,48 @@ class Blog extends React.Component{
   return (
     <div>
      <Navbar/>
-     <ProductList/>
+    <div className='blogs'>
     {this.state.details.map((output,id)=>(
-      <div key={id}>
-        <h2>{output.title}</h2>
-        <h3>{output.content}</h3>
-        <h3>{output.author}</h3>
-        <h3>{output.created_at}</h3>
-        <h3>{output.updated_at}</h3>
-        <h3>{output.category}</h3>
-        <img src={output.image}/>
-        <a>{id}</a>
+      <div className='cards' key={id}>
+        <div>
+        <img className = "blog-image" src={output.image}/>
+        </div>
+
+
+        <div>
+        <h2 className = "blog-title">{output.title}</h2>
+        </div>
+
+
+        <div>
+        <h3 className='blog-content'>{output.content}</h3>
+        </div>
         
+        <div>
+        <h3 className='blog-author'>{output.author}</h3>
+        </div>
+        
+        <div>
+        <h3 className='blog-create'>{output.created_at}</h3>
+        </div>
+        
+        <div>
+        <h3 className='blog-update'>{output.updated_at}</h3>
+        </div>
+
+        <div>
+        <h3 className='blog-category'>{output.category}</h3>
+        </div>
+       
+       
+   
        
       </div>
 
 
     ))}
 
-
+      </div>
     </div>
   );
 
