@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import Navbar from './components/Navbar';
+
 class App extends React.Component{
   state = { details:[],}
   componentDidMount(){
