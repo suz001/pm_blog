@@ -5,12 +5,12 @@ from blog.models import Blog
  
 # create a serializer class
 class BlogSerializer(serializers.ModelSerializer):
- 
+
     # create a meta class
     class Meta:
         model = Blog
         fields = ['title','author','content',
-                  'created_at','updated_at','category','image']
+                  'created_at','updated_at','category','image','slug']
         
     def get_photo_url(self,obj):
         request = self.content.get('request')

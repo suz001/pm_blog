@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 class Blog(models.Model):
@@ -9,4 +10,8 @@ class Blog(models.Model):
     updated_at = models.DateField(auto_now=True)
     category = models.CharField(max_length=40)
     image = models.ImageField(upload_to='blog/')
+  #  blogid = models.CharField
+    slug = models.SlugField()  # new
 
+    def get_absolute_url(self):
+        return reverse("article_detail", kwargs={"slug": self.slug})  # new
