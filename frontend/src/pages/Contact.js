@@ -1,19 +1,46 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import Navbar from '../components/Navbar';
 import '../css/Contact.css';
+const baseUrl = 'http://127.0.0.1:8000/contact/';
 
 const Contact = () =>{
 
-  const [data, setData]=useState({name:"",email:"",phone:"",message:""});
+  const [ContactData, setContactData]=useState({
+    name:"",
+    email:"",
+    phone:"",
+    message:"",
+    status:""});
 
-  const handleChange = (e) =>{
-    const name = e.target.name;
-    const value = e.target.value;
-    setData({...data,[name]:value})
+  const handleChange = (event) =>{
+    setContactData({...ContactData,[event.target.name]:event.target.value});
+
 
   }
-  const handleSubmit = async() =>{
-  }
+  const SubmitForm = () =>{
+    const ContactFormData = new FormData();
+    ContactFormData.append('name',ContactData.name)
+    ContactFormData.append('email',ContactData.email)
+    ContactFormData.append('phone',ContactData.phone)
+    ContactFormData.append('message',ContactData.message)
+    
+    try{
+      axios.post(baseUrl,ContactFormData).then((response)=>{
+        setContactData({
+          name:'',
+          email:'',
+          phone:'',
+          message:'',
+          status:'success'
+        })
+      })
+    }catch(error){
+        console.log(error);
+        setContactData({'status':'error'})
+      }
+    }
+  
 /*
 
   const handleSubmit = async() =>{
@@ -32,22 +59,23 @@ const Contact = () =>{
     })
 
   }
+  <input type="submit" value='Submit'/>
   */
 
   return (
   
     <div>
       <Navbar/>
-    <div class='container'>
-      <form id='contact' onSubmit={handleSubmit}>
+    <div className='container'>
+      <form id='contact' >
         <label/>
         <h1>Contact <span>Here</span></h1>
         <label/>
-        <input type="text" name="name" id="" onChange={handleChange} value={data.name} placeholder="Enter Name" required/>
-        <input type="text" name="email" id="" onChange={handleChange} value={data.email} placeholder="Enter Email" required/>
-        <input type="text" name="phone" id="" onChange={handleChange} value={data.phone} placeholder="Enter Phone" required/>
-        <textarea name="message" id="message" cols="30" rows="10" onChange={handleChange} value={data.message} required> Enter text here... </textarea>
-        <input type="submit" value='Submit'/>
+        <input type="text" name="name" id="" onChange={handleChange} value={ContactData.name} placeholder="Enter Name" required/>
+        <input type="text" name="email" id="" onChange={handleChange} value={ContactData.email} placeholder="Enter Email" required/>
+        <input type="text" name="phone" id="" onChange={handleChange} value={ContactData.phone} placeholder="Enter Phone" required/>
+        <textarea name="message" id="message" cols="30" rows="10" onChange={handleChange} value={ContactData.message} required> Enter text here... </textarea>
+        <button onClick={SubmitForm} type="sumbit">Send</button>
       </form>      
     </div>    
     </div>   
