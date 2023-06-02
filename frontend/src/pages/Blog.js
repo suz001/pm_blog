@@ -35,6 +35,9 @@ class Blog extends React.Component{
 
     </div>
 
+    <div>
+    <button className='blog-category'>{output.category}</button>
+    </div>
 
     <div>
     <Link to={`/blog/${output.id}`} className = "blog-title">{output.title}</Link>
@@ -57,9 +60,7 @@ class Blog extends React.Component{
     <h3 className='blog-update'>{output.updated_at}</h3>
     </div>
 
-    <div>
-    <h3 className='blog-category'>{output.category}</h3>
-    </div>
+   
    
    
 
