@@ -37,8 +37,8 @@ class Blog extends React.Component{
 
 
     <div>
-    <Link to={`/blog/${output.slug}`} className = "blog-title">{output.title}</Link>
-   <a>{}</a>
+    <Link to={`/blog/${output.id}`} className = "blog-title">{output.title}</Link>
+   <a>{output.id}</a>
     </div>
 
     <div>

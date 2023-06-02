@@ -5,20 +5,31 @@ import React, { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar';
 import axios from 'axios';
 
-const baseURL = "https://jsonplaceholder.typicode.com/posts/1";
+const BlogPage=()=>{
+  const [post, getPost] =useState({});
+  const {id} = useParams();
 
-export default function BlogPage() {
-  const [post, getPost] =useState(null);
-  const {blogslug} = useParams();
-console.log(blogslug);
+  const getSingleBlog = async() =>{
+    const {data} = await axios.get(`http://127.0.0.1:8000/${id}`)
+    getPost(data)
+    console.log({id})
+  }
 
-const fetchDetail = ()=>{
-  fetch
-}
+  useEffect(()=>{
+    getSingleBlog();
+  },[])
+
+
   return (
     <div>
-      <h1>{post.title}</h1>
-      <p>{post.body}</p>
+     <Navbar></Navbar>
+<a>{post.title}</a>
     </div>
   );
+
 }
+
+
+
+  
+export default BlogPage

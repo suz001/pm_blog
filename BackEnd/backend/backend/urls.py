@@ -26,7 +26,7 @@ from contact.views import ContactList
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('',BlogView.as_view(), name="blog"),
-    #path('<slug:slug>/', BlogDetail.as_view()),
+    path("<int:pk>", BlogDetail.as_view(),name = "blogdetail"),
     path('contact/',ContactList.as_view(),name='contact'),
     
 ]+static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

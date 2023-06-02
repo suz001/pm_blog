@@ -13,5 +13,8 @@ class Blog(models.Model):
   #  blogid = models.CharField
     slug = models.SlugField()  # new
 
+    def __str__(self):
+        return self.title
+    
     def get_absolute_url(self):
         return reverse("article_detail", kwargs={"slug": self.slug})  # new
