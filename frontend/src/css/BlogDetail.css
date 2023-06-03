@@ -1,0 +1,7 @@
+.detail-imgae{
+    height: 40%;
+    width: 100%;
+       display: block;
+       object-fit: cover;
+       border-radius: 6px 6px 6px 6px;
+}

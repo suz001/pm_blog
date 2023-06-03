@@ -23,7 +23,20 @@ const BlogPage=()=>{
   return (
     <div>
      <Navbar></Navbar>
-<a>{post.title}</a>
+     <div> 
+      <h2>{post.title}</h2>
+     </div>
+     
+     <div>
+      <h4>{post.created_at}</h4>
+     </div>
+
+     <div>
+     <img className="detail-image" src={`http://127.0.0.1:8000${post.image}`} alt=""/>
+     </div>
+     <div>
+      <p>{post.content}</p>
+     </div>
     </div>
   );
 
