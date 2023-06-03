@@ -34,31 +34,23 @@ class Blog extends React.Component{
     <img className = "blog-image" src={output.image} alt=""/>
 
     </div>
-
+    <div className='card-info'> 
     <div>
     <button className='blog-category'>{output.category}</button>
     </div>
 
     <div>
-    <Link to={`/blog/${output.id}`} className = "blog-title">{output.title}</Link>
-   <a>{output.id}</a>
+    <Link to={`/blog/${output.id}`} className = "blog-title">{output.title} contine je;;p wefwefhwo ef hwgeu</Link>
+
     </div>
 
-    <div>
-    <h3 className='blog-content'>{output.content}</h3>
-    </div>
+   
     
     <div>
-    <h3 className='blog-author'>{output.author}</h3>
+    <h3 className='blog-author'>By {output.author}</h3>
     </div>
-    
-    <div>
-    <h3 className='blog-create'>{output.created_at}</h3>
     </div>
-    
-    <div>
-    <h3 className='blog-update'>{output.updated_at}</h3>
-    </div>
+
 
    
    
