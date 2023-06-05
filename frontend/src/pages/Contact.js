@@ -18,7 +18,7 @@ const Contact = () =>{
 
 
   }
-  const SubmitForm = () =>{
+  const SubmitForm = (event) =>{
     const ContactFormData = new FormData();
     ContactFormData.append('name',ContactData.name)
     ContactFormData.append('email',ContactData.email)
@@ -39,35 +39,19 @@ const Contact = () =>{
         console.log(error);
         setContactData({'status':'error'})
       }
+      //event.preventDefault();
     }
   
-/*
 
-  const handleSubmit = async() =>{
-    let formField = new FormData();
-    formField.append('name',data.name);
-    formField.append('email',data.email);
-    formField.append('phone',data.phone);
-    formField.append('message',data.message);
 
-    await axios({
-      method:'post',
-      url: 'http://localhost:8000/contact/',
-      data: formField,
-    }).then((response)=>{
 
-    })
-
-  }
-  <input type="submit" value='Submit'/>
-  */
 
   return (
   
     <div>
       <Navbar/>
     <div className='container'>
-      <form id='contact' >
+      <form id='contact' action={SubmitForm}>
         <label/>
         <h1>Contact <span>Here</span></h1>
         <label/>
@@ -75,7 +59,7 @@ const Contact = () =>{
         <input type="text" name="email" id="" onChange={handleChange} value={ContactData.email} placeholder="Enter Email" required/>
         <input type="text" name="phone" id="" onChange={handleChange} value={ContactData.phone} placeholder="Enter Phone" required/>
         <textarea name="message" id="message" cols="30" rows="10" onChange={handleChange} value={ContactData.message} required> Enter text here... </textarea>
-        <button onClick={SubmitForm} type="sumbit">Send</button>
+        <input type="submit" value='Submit'/>
       </form>      
     </div>    
     </div>   
