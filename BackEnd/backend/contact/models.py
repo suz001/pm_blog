@@ -15,10 +15,10 @@ class Contact(models.Model):
         send_mail(
             "Contact from purple melon",
             "Here is the message.",
-            "cjy12312311@gmail.com",
+            self.email,
             ['purplemelon000@gmail.com'],
             fail_silently=False,
-            html_message = f'<p>{self.name}</p><p>{self.message}</p>',
+            html_message = f'<p>{self.name}</p><p>{self.message}</p><p>{self.phone}</p><p>{self.email}</p>'
 
         )
         return super(Contact,self).save(*args,**kwargs)

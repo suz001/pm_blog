@@ -39,10 +39,8 @@ const Contact = () =>{
         console.log(error);
         setContactData({'status':'error'})
       }
-      //event.preventDefault();
+    //event.preventDefault();
     }
-  
-
 
 
 
@@ -51,7 +49,7 @@ const Contact = () =>{
     <div>
       <Navbar/>
     <div className='container'>
-      <form id='contact' action={SubmitForm}>
+      <form id='contact' >
         <label/>
         <h1>Contact <span>Here</span></h1>
         <label/>
@@ -59,7 +57,7 @@ const Contact = () =>{
         <input type="text" name="email" id="" onChange={handleChange} value={ContactData.email} placeholder="Enter Email" required/>
         <input type="text" name="phone" id="" onChange={handleChange} value={ContactData.phone} placeholder="Enter Phone" required/>
         <textarea name="message" id="message" cols="30" rows="10" onChange={handleChange} value={ContactData.message} required> Enter text here... </textarea>
-        <input type="submit" value='Submit'/>
+        <button onClick={SubmitForm} type="sumbit" class="button contactButton">Send</button>
       </form>      
     </div>    
     </div>   
