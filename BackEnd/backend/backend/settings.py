@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'contact',
     'phone_field',
-    
+    'ckeditor',
 ]
 
 MIDDLEWARE = [

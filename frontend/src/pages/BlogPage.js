@@ -4,6 +4,7 @@ import {useParams} from "react-router-dom"
 import React, { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar';
 import axios from 'axios';
+import parse from 'html-react-parser'
 
 const BlogPage=()=>{
   const [post, getPost] =useState({});
@@ -35,7 +36,8 @@ const BlogPage=()=>{
      <img className="detail-image" src={`http://127.0.0.1:8000${post.image}`} alt=""/>
      </div>
      <div>
-      <p>{post.content}</p>
+     <div dangerouslySetInnerHTML={{__html: `${post.content}`}}></div>
+
      </div>
     </div>
   );
