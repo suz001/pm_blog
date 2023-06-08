@@ -1,7 +1,42 @@
-.detail-imgae{
+.each-blog-title{
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5em;
+  padding-bottom: 15px;
+  position: relative;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-whole{
+    
+    display: grid;
+	justify-self: center;
+    top: 50%;
+    left: 50%;
+
+    width: 80em
+
+/*  align-items: center; */
+}
+
+
+.detail-image{
+  
+    margin-left: auto;
+    margin-right: auto;
+   
     height: 40%;
-    width: 100%;
-       display: block;
-       object-fit: cover;
-       border-radius: 6px 6px 6px 6px;
+    width: 60%;
+    display: block;
+    object-fit: cover;
+    border-radius: 6px 6px 6px 6px;
+}
+.blog-content{ 
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: 48em;
 }

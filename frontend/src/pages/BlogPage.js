@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar';
 import axios from 'axios';
 import parse from 'html-react-parser'
+import '../css/BlogDetail.css';
 
 const BlogPage=()=>{
   const [post, getPost] =useState({});
@@ -22,10 +23,12 @@ const BlogPage=()=>{
 
 
   return (
+ 
     <div>
      <Navbar></Navbar>
+     <div  className="blog-whole">
      <div> 
-      <h2>{post.title}</h2>
+      <h2 className="each-blog-title">{post.title}</h2>
      </div>
      
      <div>
@@ -35,10 +38,17 @@ const BlogPage=()=>{
      <div>
      <img className="detail-image" src={`http://127.0.0.1:8000${post.image}`} alt=""/>
      </div>
+
+     <article> 
      <div>
-     <div dangerouslySetInnerHTML={{__html: `${post.content}`}}></div>
+     <div className="blog-content" dangerouslySetInnerHTML={{__html: `${post.content}`}}></div>
 
      </div>
+
+  
+     
+    </article>
+    </div>
     </div>
   );
 
