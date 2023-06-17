@@ -31,17 +31,23 @@ const BlogPage=()=>{
       <h2 className="each-blog-title">{post.title}</h2>
      </div>
      
-     <div>
-      <h4>{post.created_at}</h4>
-     </div>
+   
 
      <div>
      <img className="detail-image" src={`http://127.0.0.1:8000${post.image}`} alt=""/>
      </div>
 
+     <div className="publish-date">
+      <a>{post.created_at}</a>
+     </div>
+
      <article> 
      <div>
-     <div className="blog-content" dangerouslySetInnerHTML={{__html: `${post.content}`}}></div>
+     <div className="blog-content" dangerouslySetInnerHTML={{__html: `${post.content}`}}>
+ 
+     </div>
+
+    
 
      </div>
 
