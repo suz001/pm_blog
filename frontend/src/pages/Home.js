@@ -5,7 +5,23 @@ function Home() {
     <div>
       <Navbar/>
 
-    
+      <section className='homesection'>
+        <h1> Hey everyone, welcome to PurpleMelon!</h1>
+     
+        </section>
+        
+
+
+<section className='homesection'>
+      <p className='title'> 
+        PurpleMelon is a blogging platform discussing all things about
+        algorithms, data analysis, and mathematical concepts.
+        We aim to procide you with a wealth of knowledge in these interconnected fields.
+      </p>
+
+      </section>
+
+      <section className='homesection'>
 
 <div class="playful" aria-label="Wash your hands">
   <span aria-hidden="true">L</span>
@@ -20,14 +36,9 @@ function Home() {
   <span aria-hidden="true">e</span>
   <span aria-hidden="true">!</span>
 </div>
+</section>
 
 
-      <p> 
-        Hey everyone, welcome to PurpleMelon!
-        PurpleMelon is a blogging platform discussing all things about
-        algorithms, data analysis, and mathematical concepts.
-        We aim to procide you with a wealth of knowledge in these interconnected fields.
-      </p>
         </div>
   )
 }

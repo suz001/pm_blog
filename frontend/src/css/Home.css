@@ -16,32 +16,27 @@
 
 .playful span {
   position: relative;
-  color: #5362F6;
-  text-shadow: textShadow(0.25, 6, #E485F8);
+  
   animation: scatter 1.75s infinite;
 }
 
 .playful span:nth-child(2n) {
-  color: #ED625C;
-  text-shadow: textShadow(0.25, 6, #F2A063);
+  
   animation-delay: 0.3s;
 }
 
 .playful span:nth-child(3n) {
-  color: #FFD913;
-  text-shadow: textShadow(0.25, 6, #6EC0A9);
+  
   animation-delay: 0.15s;
 }
 
 .playful span:nth-child(5n) {
-  color: #555BFF;
-  text-shadow: textShadow(0.25, 6, #E485F8);
+ 
   animation-delay: 0.4s;
 }
 
 .playful span:nth-child(7n), .playful span:nth-child(11n) {
-  color: #FF9C55;
-  text-shadow: textShadow(0.25, 6, #FF5555);
+
   animation-delay: 0.25s;
 }
 
@@ -62,7 +57,7 @@
 .playful {
   font-size: 65px;
   text-transform: uppercase;
-  font-family: "Archivo Black", "Archivo", sans-serif;
+
   font-weight: normal;
   display: block;
   width: 300px;
@@ -72,3 +67,32 @@
   text-align: center;
   
 }
+
+.homesection{
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  padding: 1rem;
+  position: sticky;
+  width: 100%;
+  z-index: -1;
+background-color:#6EC0A9;
+}
+
+.homesection:nth-child(2) {
+  z-index: -2;
+  background-color: #E485F8;
+}
+
+.homesection:nth-child(3) {
+ background-color:#181c3f;
+	z-index: -3;
+}
+
+.homesection:last-child {
+  z-index: -4;
+}
+
+
