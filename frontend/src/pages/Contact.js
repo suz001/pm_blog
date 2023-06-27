@@ -46,9 +46,9 @@ const Contact = () =>{
 
   return (
   
-    <div>
+    <div className="contactContainer">
       <Navbar/>
-    <div className='container'>
+    <div className='contactdiv'>
       <form id='contact' >
         <label/>
         <h1>Contact <span>Here</span></h1>
