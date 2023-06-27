@@ -93,7 +93,7 @@
 }
 
 .homesection:nth-child(3) {
- background-image: url("images/home_page_back0.png");;
+ background-image: url("images/home_page_2.png");;
 	z-index: -3;
   background-size:cover;
   width: 100%;
@@ -116,9 +116,9 @@ animation-fill-mode: forwards;
 }
 
 .scroll_1{
-  font-size: 20px;
+  font-size: 24px;
  color:black;
-margin-top: 10%;
+
 animation: fadeInAnimation ease 5s;
 animation-iteration-count: 1;
 animation-fill-mode: forwards;
