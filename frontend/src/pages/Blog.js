@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import '../css/Bloglist.css';
 import '../css/Home.css';
 import {Link} from "react-router-dom";
+import Footer from '../components/Footer';
 
 class Blog extends React.Component{
   state = { details:[],}
@@ -64,6 +65,8 @@ class Blog extends React.Component{
     ))}
 
       </div>
+
+    <Footer />
     </div>
   );
 
