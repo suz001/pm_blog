@@ -2,20 +2,29 @@ import React from 'react'
 import '../css/Footer.css';
 function Footer() {
   return (
-    <div className='footer-main'>
-
-        <h2>Email Us</h2>
-        <h4>email here</h4>
-        <h5>PURPLEMELON</h5>
-<hr/>
-        <div className='row'>
-            <p className='col-sm'>
+    
+    <footer className='footer-main'>
+      <div class="footer-left">
+      <img src="favicon.ico" alt="Icon" className='iconfooter'></img>
+      <p className='CompanyName'>PurpleMelon</p>
+     <hr/>
+     
+     <p className='copyright'>
             Copyright &copy; {new Date().getFullYear()}. All rights reserved
-
             </p>
+      </div>
+      <div class="footer-right">
+        <h4>Email Us</h4>
+        <br/>
+        <h4>purplemelon000@gmail.com</h4>
+        
         </div>
-        </div>
+
+        </footer>
+        
   )
 }
 
 export default Footer
+
+

@@ -1,8 +1,28 @@
 .footer-main{
+    background-color: #2B0A59;
     text-align: center;
     bottom:0%;
-    background-color: #e6e6fa;
     position: absolute;
     width: 100%;
+    background-size: cover;
+    max-height: 110px;
+    padding: 20px 50px;
+    color:white;
+    justify-content: center;
   ;    
+}
+.footer-main .footer-left{
+	float: left;
+  margin-left: 3px;
+}
+
+.iconfooter{
+  max-width: 30px;
+  max-height: 30px;
+}
+.footer-main .copyright{
+  font-size: 10px;
+}
+.footer-main .CompanyName{
+  font-size: 30px;
 }
