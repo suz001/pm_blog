@@ -4,7 +4,7 @@ function Footer() {
   return (
     
     <footer className='footer-main'>
-      <div class="footer-left">
+      <div className="footer-left">
       <img src="favicon.ico" alt="Icon" className='iconfooter'></img>
       <p className='CompanyName'>PurpleMelon</p>
      <hr/>
@@ -13,7 +13,7 @@ function Footer() {
             Copyright &copy; {new Date().getFullYear()}. All rights reserved
             </p>
       </div>
-      <div class="footer-right">
+      <div className="footer-right">
         <h4>Email Us</h4>
         <br/>
         <h4>purplemelon000@gmail.com</h4>

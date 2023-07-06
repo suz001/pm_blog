@@ -27,7 +27,7 @@ function Home() {
 
       <section className='homesection'>
 <div className='scroll_2'>
-<div class="playful" aria-label="Wash your hands">
+<div className="playful" aria-label="Wash your hands">
   <span aria-hidden="true">L</span>
   <span aria-hidden="true">e</span>
   <span aria-hidden="true">t</span>

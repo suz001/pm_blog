@@ -5,7 +5,7 @@ import '../css/Bloglist.css';
 import '../css/Home.css';
 import {Link} from "react-router-dom";
 import Footer from '../components/Footer';
-
+import {Helmet} from "react-helmet";
 
 class Blog extends React.Component{
   state = { details:[],}
@@ -25,15 +25,18 @@ class Blog extends React.Component{
 
 
 
+
  render(){
   return (
     <div>
      <Navbar/>
-     
-     <div class="wrap">
-    <div class="search">
-       <input type="text" class="searchTerm" placeholder="What are you looking for?"></input>
-       <button type="submit" class="searchButton">
+    
+      <script src="../components/Search.js" type="text/javascript" />
+    
+     <div className="wrap">
+    <div className="search">
+       <input type="text" className="searchTerm" placeholder="What are you looking for?"></input>
+       <button type="submit" className="searchButton">
         
       </button>
     </div>
@@ -41,7 +44,7 @@ class Blog extends React.Component{
 
     <div className='blogs'>
     {this.state.details.map((output,id)=>(
-    
+
     <div className='cards' key={id}>
     <div>
     <img className = "blog-image" src={output.image} alt=""/>
@@ -56,8 +59,7 @@ class Blog extends React.Component{
     <Link to={`/blog/${output.id}`} className = "blog-title">{output.title} contine je;;p wefwefhwo ef hwgeu</Link>
 
     </div>
-
-   
+    
     
     <div>
     <h3 className='blog-author'>By {output.author}</h3>
@@ -73,6 +75,7 @@ class Blog extends React.Component{
    
   </div>
 
+   
 
     ))}
 
