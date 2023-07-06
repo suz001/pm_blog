@@ -6,6 +6,7 @@ import '../css/Home.css';
 import {Link} from "react-router-dom";
 import Footer from '../components/Footer';
 
+
 class Blog extends React.Component{
   state = { details:[],}
   componentDidMount(){
@@ -28,6 +29,16 @@ class Blog extends React.Component{
   return (
     <div>
      <Navbar/>
+     
+     <div class="wrap">
+    <div class="search">
+       <input type="text" class="searchTerm" placeholder="What are you looking for?"></input>
+       <button type="submit" class="searchButton">
+        
+      </button>
+    </div>
+ </div>
+
     <div className='blogs'>
     {this.state.details.map((output,id)=>(
     
@@ -52,6 +63,7 @@ class Blog extends React.Component{
     <h3 className='blog-author'>By {output.author}</h3>
     </div>
     </div>
+
 
 
    

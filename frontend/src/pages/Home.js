@@ -1,7 +1,9 @@
 import React from 'react'
 import Navbar from '../components/Navbar';
+import {Link} from "react-router-dom";
 
 function Home() {
+
   return (
     <div>
       <Navbar/>
@@ -32,14 +34,21 @@ function Home() {
   <span aria-hidden="true">'</span>
   <span aria-hidden="true">s</span>
   <span aria-hidden="true"> </span>
-  <span aria-hidden="true">C</span>
-  <span aria-hidden="true">o</span>
-  <span aria-hidden="true">d</span>
-  <span aria-hidden="true">e</span>
+  <span aria-hidden="true">S</span>
+  <span aria-hidden="true">t</span>
+  <span aria-hidden="true">a</span>
+  <span aria-hidden="true">r</span>
+  <span aria-hidden="true">t</span>
   <span aria-hidden="true">!</span>
-</div>
 
 </div>
+
+
+
+</div>
+
+
+
 </section>
 
 
