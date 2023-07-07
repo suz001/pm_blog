@@ -3,7 +3,7 @@ import axios from "axios";
 import Navbar from '../components/Navbar';
 import '../css/Contact.css';
 const baseUrl = 'http://127.0.0.1:8000/contact/';
-
+//set variables
 const Contact = () =>{
 
   const [ContactData, setContactData]=useState({
@@ -18,13 +18,14 @@ const Contact = () =>{
 
 
   }
+  //send data to django 
   const SubmitForm = (event) =>{
     const ContactFormData = new FormData();
     ContactFormData.append('name',ContactData.name)
     ContactFormData.append('email',ContactData.email)
     ContactFormData.append('phone',ContactData.phone)
     ContactFormData.append('message',ContactData.message)
-    
+//send email using django 
     try{
       axios.post(baseUrl,ContactFormData).then((response)=>{
         setContactData({

@@ -14,10 +14,14 @@ function Footer() {
             </p>
       </div>
       <div className="footer-right">
-        <h4>Email Us</h4>
-        <br/>
-        <h4>purplemelon000@gmail.com</h4>
-        
+      
+        <ul className='footer-ul'>
+            <li><a className='footer-a' href="/">Home</a></li>
+            <li><a className='footer-a' href="/blog">Blog</a></li>
+            <li><a className='footer-a' href="/contact">Contact</a></li>
+          
+        </ul>
+
         </div>
 
         </footer>

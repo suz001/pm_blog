@@ -25,4 +25,34 @@
 }
 .footer-main .CompanyName{
   font-size: 30px;
+  font-family: Menlo, monospace;
+}
+
+
+
+.footer-main .footer-right {
+  line-height: 4.6;
+  font-family: Menlo, monospace;
+  
+}
+.footer-main .footer-ul {
+  display: inline-grid;
+  grid-auto-flow: row;
+  grid-gap: 80px;
+  justify-items: center;
+  margin: auto;
+  list-style-type: none;
+}
+@media (min-width: 500px) {
+  .footer-main .footer-ul {
+    grid-auto-flow: column;
+  }
+}
+.footer-a {
+  color: white;
+  text-decoration: none;
+  box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
+}
+.footer-a:hover {
+  box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
 }
