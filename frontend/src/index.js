@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
@@ -10,8 +9,11 @@ import BlogPage from './pages/BlogPage';
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
+
 } from "react-router-dom";
+
+const LazyBlogPage = React.lazy(()=>import('./pages/BlogPage'))
+const LazyContact = React.lazy(()=>import('./pages/Contact'))
 
 const router = createBrowserRouter([
   {
@@ -20,15 +22,25 @@ const router = createBrowserRouter([
   },
   {
     path: "/blog",
-    element: <Blog/>,
+
+    element:  <Blog/>
+    
   },
   {
     path: "/contact",
-    element: <Contact/>,
+    element:
+    <React.Suspense fallback='Loading...'>
+    <LazyContact/>
+    </React.Suspense>,
+   
   },
   {
     path: "/blog/:id",
-    element: <BlogPage/>,
+    element: 
+    <React.Suspense fallback='Loading...'>
+<LazyBlogPage/>
+    </React.Suspense>
+    ,
   },
 ]);
 

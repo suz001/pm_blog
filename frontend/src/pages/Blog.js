@@ -60,17 +60,11 @@ class Blog extends React.Component{
 
     </div>
     
-    
     <div>
     <h3 className='blog-author'>By {output.author}</h3>
     </div>
     </div>
 
-
-
-   
-   
-   
 
    
   </div>
