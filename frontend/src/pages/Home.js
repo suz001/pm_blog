@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar';
 function Home() {
 
   return (
-    <div>
+    <div data-testid="home1">
       <Navbar/>
 
       <section className='homesection'>
@@ -15,7 +15,7 @@ function Home() {
         
 
 
-<section className='homesection'>
+      <section className='homesection'>
       <p className='scroll_1'> 
         PurpleMelon is a blogging platform discussing all things about
         algorithms, data analysis, and mathematical concepts.
@@ -26,35 +26,25 @@ function Home() {
       </section>
 
       <section className='homesection'>
-<div className='scroll_2'>
-<div className="playful" aria-label="Wash your hands">
-  <span aria-hidden="true">L</span>
-  <span aria-hidden="true">e</span>
-  <span aria-hidden="true">t</span>
-  <span aria-hidden="true">'</span>
-  <span aria-hidden="true">s</span>
-  <span aria-hidden="true"> </span>
-  <span aria-hidden="true">S</span>
-  <span aria-hidden="true">t</span>
-  <span aria-hidden="true">a</span>
-  <span aria-hidden="true">r</span>
-  <span aria-hidden="true">t</span>
-  <span aria-hidden="true">!</span>
+      <div className='scroll_2'>
+      <div className="playful" aria-label="Wash your hands">
+      <span aria-hidden="true">L</span>
+       <span aria-hidden="true">e</span>
+      <span aria-hidden="true">t</span>
+      <span aria-hidden="true">'</span>
+      <span aria-hidden="true">s</span>
+      <span aria-hidden="true"> </span>
+      <span aria-hidden="true">S</span>
+      <span aria-hidden="true">t</span>
+      <span aria-hidden="true">a</span>
+      <span aria-hidden="true">r</span>
+      <span aria-hidden="true">t</span>
+      <span aria-hidden="true">!</span>
 
 </div>
-
-
-
 </div>
-
-
-
 </section>
-
-
-
         </div>
-
        
   )
 }

@@ -46,13 +46,8 @@ const BlogPage=()=>{
      <div className="blog-content" dangerouslySetInnerHTML={{__html: `${post.content}`}}>
  
      </div>
-
-    
-
      </div>
-
-  
-     
+ 
     </article>
     </div>
     </div>

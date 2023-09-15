@@ -23,9 +23,6 @@ class Blog extends React.Component{
 }
 
 
-
-
-
  render(){
   return (
     <div>
@@ -64,12 +61,8 @@ class Blog extends React.Component{
     <h3 className='blog-author'>By {output.author}</h3>
     </div>
     </div>
-
-
-   
+ 
   </div>
-
-   
 
     ))}
 
