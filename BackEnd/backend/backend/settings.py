@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-wm&9!p+4=5e5hua^r10mpd1kya&_7p3p^x(fn5ozt1sh!y7_*$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # White listing the localhost:3000 port
@@ -150,6 +150,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'purplemelon000@gmail.com'
 EMAIL_HOST_PASSWORD = 'gwhigbnxchgfgogv'
 EMAIL_PORT=587
-
 
 
