@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from '../components/Navbar';
 import '../css/Contact.css';
-const baseUrl = 'http://127.0.0.1:8000/contact/';
+const baseUrl = 'http://18.222.150.136:8000/contact/';
 //set variables
 const Contact = () =>{
 

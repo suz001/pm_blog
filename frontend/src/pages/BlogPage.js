@@ -12,7 +12,7 @@ const BlogPage=()=>{
   const {id} = useParams();
 
   const getSingleBlog = async() =>{
-    const {data} = await axios.get(`http://127.0.0.1:8000/${id}`)
+    const {data} = await axios.get(`http://18.222.150.136:8000/${id}`)
     getPost(data)
     console.log({id})
   }
@@ -34,7 +34,7 @@ const BlogPage=()=>{
    
 
      <div>
-     <img className="detail-image" src={`http://127.0.0.1:8000${post.image}`} alt=""/>
+     <img className="detail-image" src={`http://18.222.150.136:8000${post.image}`} alt=""/>
      </div>
 
      <div className="publish-date">
