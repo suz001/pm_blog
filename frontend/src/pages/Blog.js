@@ -12,8 +12,8 @@ class Blog extends React.Component{
   componentDidMount(){
 
   let data;
-  axios.get('http://18.222.150.136:8000')
-  //axios.get('http://localhost:8000')
+ // axios.get('http://18.222.150.136:8000')
+  axios.get('http://localhost:8000')
   .then(res => {
     data = res.data;
     this.setState({

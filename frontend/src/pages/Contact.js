@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from '../components/Navbar';
 import '../css/Contact.css';
-const baseUrl = 'http://18.222.150.136:8000/contact/';
+//const baseUrl = 'http://18.222.150.136:8000/contact/';
 //set variables
+const baseUrl = 'http://localhost:8000/contact/';
 const Contact = () =>{
 
   const [ContactData, setContactData]=useState({
